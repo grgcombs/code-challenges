@@ -1,4 +1,4 @@
-# Knowldye-Based Questions
+# Knowledge-Based Questions
 
 # Coding Challenges
 
