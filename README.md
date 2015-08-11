@@ -1,7 +1,7 @@
 objc-code-challenges
 ====================
 
-Objective-C Code Challenges -- Or: How we cope with shame and embarrassment in presence of the masters.
+Objective-C/Swift Code Challenges -- Or: How we cope with shame and embarrassment in presence of the masters.
 
 # Knowledge-based Questions
 
@@ -18,7 +18,7 @@ Not coding challenges, but nevertheless you should be able to speak fluently on 
 
 # Coding Questions
 
-1. What is a good, performant way to implement thread-friendly (if not completely -safe)  property setters/getters. (Don't say @synchronized() or NSLocks).
+1. What is a good, performant way to implement thread-friendly (if not completely thread-safe) property setters/getters. (Don't say `@synchronized()` or NSLock).
 
 2. (follow-up to NSCache question above) How would you reimplement NSURLCache? Keep in mind, when a response hasn't been stored or accessed in a long time, it should be pruned first when the cache is near capacity. 
 
@@ -40,14 +40,21 @@ Not coding challenges, but nevertheless you should be able to speak fluently on 
 
 11. Given a histogram data representation, how would you find the adjacent bar columns that collectively yield a rectangle with the largest coverage area. 
 
-12. Given a string of words and a maxWidth CGFloat, write a method that inserts new lines where appropriate to perform a word-wrap. (Wrap on word boundaries, assume " " is fine). Now, assume that you must call a provided method -widthOfString: for any combination of words in a string -- this is to account for the differences in letter kerning and glyph sizes in the font. For example, the width of "ham" + the width of "burger" is not the same as the width of "hamburger". Now, how does your implementation handle string with multiple spaces between words ... Are those extra spaces lost or preserved? (Not important to necessarily preserve them, so long as you note the loss as a known caveat). 
+12. Given a string of words and a maxWidth, write a method that inserts new lines where appropriate to perform a word-wrap. (Wrap on word boundaries, assume " " is fine). 
+ - Now, assume that you must call a provided method -widthOfString: for any combination of words in a string. This is to account for the differences in letter kerning and glyph sizes in the font. 
+ - For example, the width of "ham" + the width of "burger" is not the same as the width of "hamburger". 
+ - Now, how does your implementation handle string with multiple spaces between words ... Are those extra spaces lost or preserved? (Not important to necessarily preserve them, so long as you note the loss as a known caveat). 
 
-13. Given a list of integers, your task is to write a program to output an integer-valued list of equal length such that the output element at index 'i' is the product of all input elements except for the input element at 'i'.  As an example, if `inputArray = { 1, 2, 3, 4 }`, then `outputArray = { 2*3*4, 1*3*4, 1*2*4, 1*2*3 }` It should run in O(n) time and should be space efficient.
+13. Given a list of integers, your task is to write a program to output an integer-valued list of equal length such that the output element at index 'i' is the product of all input elements, except for the input element at 'i'.  
+ - As an example, if `inputArray = { 1, 2, 3, 4 }`, then `outputArray = { 2*3*4, 1*3*4, 1*2*4, 1*2*3 }` 
+ - It should run in O(n) time and should be space efficient.
 
 14. Write a method to find the first non-repeating integer given an array of integers. 
 
-15. Write a method to determine the maximum depth of a binary tree. This was an add-on for the family tree question -- what how many generations are recorded for a given person/node
+15. Write a method to determine the maximum depth of a binary tree. This was an add-on for the family tree question. How many generations are recorded for a given person/node
 
-16. Write a function to determine whether one integer is a palindrome of another integer. Example: 1234 is a palindrome of 4321.  Don't bother trying to convert them to strings or an array of characters first, do this mathematically and be performance/space conscious. 
+16. Write a function to determine whether one integer is a palindrome of another integer. 
+ - Example: 1234 is a palindrome of 4321.  
+ - Don't get cute trying to convert them to strings or an array of characters first, do this mathematically and be performance/space conscious. 
 
 17. How would you implement the palindrome test for two strings?
