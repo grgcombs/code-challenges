@@ -14,7 +14,10 @@ Not coding challenges, but nevertheless you should be able to speak fluently on 
 - What are the appropriate cases for implementing delegates, blocks, notifications -- what do you get with notifications that you don't get with others? What do you get with blocks that you don't get with the others. 
 - What are the appropriate use-cases where you would use subclassing or use categories?  What are some limitations of each?
 - Explain each of the various bitwise operators. What is the result of performing an XOR on two identical integers?
+- What happens behind the scenes when you call retain and release on an object? (Don't simply say "it's like malloc() and free()" -- make sure to talk about retain counts increasing/decreasing)
+- How does ARC work?  How is it like garbage collection and how is it not?  How does it differ from manual retain/release?
 - Explain retain cycles -- what are the common causes of them? (I mentioned blocks referencing self, strong delegates, timers targeting their owners) 
+- What's the difference between nil, NULL, and NSNull?  
 
 # Coding Questions
 
@@ -26,7 +29,7 @@ Not coding challenges, but nevertheless you should be able to speak fluently on 
 
 4. How would you reimplement NSMutableDictionary?
 
-5. How would you restructure an array of strings to be searchable by prefix. Minimize the processing in cases where the user is live-typing in a search bar over a tableView of your strings. 
+5. How would you restructure an array of strings to be searchable by prefix. Minimize the processing in cases where the user is live-typing in a search bar over a tableView of your strings. (Build a Radix Tree, or "Prefix Tree")
 
 6. Given a single-linked list, how would you find the Nth mode from the end?
 
@@ -58,3 +61,6 @@ Not coding challenges, but nevertheless you should be able to speak fluently on 
  - Don't get cute trying to convert them to strings or an array of characters first, do this mathematically and be performance/space conscious. 
 
 17. How would you implement the palindrome test for two strings?
+
+18. How can you tell if a linked-list has a loop in it?
+
